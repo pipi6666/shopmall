@@ -1,0 +1,125 @@
+<template>
+
+  <div>
+    <scroll class="content">
+      <ul>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+        <li>个人信息</li>
+      </ul>
+    </scroll>
+  </div>
+</template>
+<script>
+import scroll from "../../components/common/scroll";
+export default {
+  name: "shopcat",
+  components: {
+    scroll,
+  },
+};
+</script>
+<style scoped>
+.content {
+  height: 300px;
+  background-color: coral;
+  overflow: hidden;
+}
+</style>
