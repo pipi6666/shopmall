@@ -4,6 +4,7 @@
       :src="goodsitem.show.img"
       alt=""
       class="goodsimg"
+      @click="itemclick"
     >
     <div>
       <p>{{goodsitem.title}}</p>
@@ -22,6 +23,11 @@ export default {
       default() {
         return {};
       },
+    },
+  },
+  methods: {
+    itemclick() {
+      this.$router.push("/detail/" + this.goodsitem.iid);
     },
   },
 };

@@ -3,11 +3,13 @@
     <navbar class="homenav">
       <h2 slot="center">购物街</h2>
     </navbar>
-     <tabcontrol
-        :titles="['流行','新款','精选']"
-        @tabclick='tabclick'
-        ref='tabcontrol' class="tabcontroltop"
-      ></tabcontrol>
+    <tabcontrol
+      :titles="['流行','新款','精选']"
+      @tabclick='tabclick'
+      ref='tabcontrol1'
+      class="tabcontrol"
+      v-show="isfixed"
+    ></tabcontrol>
     <scroll
       class="content"
       ref='scrollq'
@@ -26,7 +28,7 @@
       <tabcontrol
         :titles="['流行','新款','精选']"
         @tabclick='tabclick'
-        ref='tabcontrol' :class="{fixed:isfixed}"
+        ref='tabcontrol2'
       ></tabcontrol>
       <goodslist :goods="goods[currentype].list"></goodslist>
       <ul>
@@ -124,6 +126,8 @@ export default {
           this.currentype = "sell";
           break;
       }
+      this.$refs.tabcontrol1.currenindex = index;
+      this.$refs.tabcontrol2.currenindex = index;
     },
     backclick() {
       this.$refs.scrollq.scrollTo(0, 0);
@@ -142,7 +146,7 @@ export default {
       this.gethomegoods(this.currentype);
     },
     swiperimageload() {
-      this.taboffsettop = this.$refs.tabcontrol.$el.offsetTop;
+      this.taboffsettop = this.$refs.tabcontrol2.$el.offsetTop;
     },
     //网络请求相关的方法
     gethomemultidata() {
@@ -163,18 +167,15 @@ export default {
 };
 </script>
 <style scoped>
-#home {
-		position: relative;
-		height: 100vh;
-	}
 .homenav {
   text-align: center;
   color: #fff;
-  position: fixed;
+   background-color: pink;
+  /* position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
-		z-index: 9;
+		z-index: 9; */
 }
 .swiperqqq {
   display: block;
@@ -187,16 +188,9 @@ export default {
   left: 0;
   right: 0;
 }
-.fixed {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 44px;
+.tabcontrol {
+  position: relative;
+  z-index: 99;
+  background-color: #fff;
 }
-.tabcontroptop{
- position: relative;
-		top: 44px;
-		z-index: 9;
-}
-
 </style>

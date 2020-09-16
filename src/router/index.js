@@ -9,6 +9,8 @@ const hshopcat = () =>
     import ('../viesw/shopcat/shopcat');
 const hme = () =>
     import ('../viesw/me/me');
+const detail = () =>
+    import ('../viesw/detail/detail');
 const routes = [{
     path: '',
     redirect: '/home'
@@ -24,6 +26,9 @@ const routes = [{
 }, {
     path: '/me',
     component: hme
+}, {
+    path: '/detail/:iid',
+    component: detail
 }]
 const router = new Vuerouter({
     routes,
