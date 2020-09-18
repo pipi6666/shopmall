@@ -3,6 +3,7 @@
     <detailnavbar></detailnavbar>
     <detailswiper :topImages='topImages'></detailswiper>
     <detailbaseinfo :goods='goods'></detailbaseinfo>
+  <datailshopinfo :shop='shop'></datailshopinfo>
   </div>
 </template>
 
@@ -10,20 +11,23 @@
 import detailnavbar from "./children/detailnavbar";
 import detailswiper from "./children/detailswiper";
 import detailbaseinfo from "./children/detailbaseinfo";
+import datailshopinfo from './children/detailshopinfo'
 
-import { getdetail1, goods } from "../../network/detail";
+import { getdetail1, goods, Shop } from "../../network/detail";
 export default {
   name: "detail",
   components: {
     detailnavbar,
     detailswiper,
     detailbaseinfo,
+    datailshopinfo
   },
   data() {
     return {
       iid: null,
       topImages: [],
       goods: {},
+      shop: {},
     };
   },
   created() {
@@ -35,11 +39,12 @@ export default {
       this.topImages = shuju.itemInfo.topImages;
       //获取商品信息
       this.goods = new goods(shuju.itemInfo, shuju.columns, shuju.shopInfo);
-      console.log( this.goods);
+      //创建店铺信息
+      this.shop = new Shop(shuju.shopInfo);
+      console.log(this.shop);
     });
   },
 };
 </script>
-
 <style>
 </style>

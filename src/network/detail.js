@@ -19,3 +19,14 @@ export class goods {
         this.services = shopInfo.services;
     }
 }
+
+export class Shop {
+    constructor(shopInfo) {
+        this.fans = shopInfo.cFans;
+        this.goodscount = shopInfo.cGoods;
+        this.sells = shopInfo.cSells;
+        this.name = shopInfo.name;
+        this.score = shopInfo.score;
+        this.logo = shopInfo.shopLogo;
+    }
+}
