@@ -133,7 +133,8 @@ export default {
       this.$refs.scrollq.scrollTo(0, 0);
     },
     scrollclick(position) {
-      //判断bakctop 是否显示
+      //判断bakctop 是否显示'
+
       if (-position.y > 1000) {
         this.isshowbacktop = true;
       } else {

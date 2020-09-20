@@ -37,10 +37,10 @@ export default {
     });
     if (this.probetypes === 2 || this.probetypes === 3) {
       this.scroll.on("scroll", (position) => {
-        this.$emit("scroll", position);
+         this.$emit("scroll", position);
+
       });
     }
-
     if (this.pullUpLoads) {
       this.scroll.on("pullingUp", () => {
         this.$emit("pullingUp");

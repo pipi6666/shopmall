@@ -1,7 +1,7 @@
 <template>
   <div class="goodsdiv">
     <img
-      :src="goodsitem.show.img"
+      :src="showimage"
       alt=""
       class="goodsimg"
       @click="itemclick"
@@ -24,6 +24,11 @@ export default {
         return {};
       },
     },
+  },
+  computed:{
+    showimage(){
+      return this.goodsitem.image||this.goodsitem.show.img
+    }
   },
   methods: {
     itemclick() {

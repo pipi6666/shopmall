@@ -3,7 +3,8 @@
     <navbar>
       <div
         slot="left"
-        class="leftqqq" @click="backclick"
+        class="leftqqq"
+        @click="backclick"
       > <img src="../../../assets/img/fanhui.png"></div>
       <div
         slot="center"
@@ -37,10 +38,11 @@ export default {
   methods: {
     titleitem(index) {
       this.currentindex = index;
+      this.$emit("titleitem", index);
     },
-    backclick(){
-      this.$router.go(-1)
-    }
+    backclick() {
+      this.$router.go(-1);
+    },
   },
 };
 </script>
