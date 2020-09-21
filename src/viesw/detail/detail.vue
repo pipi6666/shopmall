@@ -3,6 +3,7 @@
     <detailnavbar
       class="detailnav"
       @titleitem='titleitem'
+      ref="navde"
     ></detailnavbar>
     <scroll
       class="detailscroll"
@@ -30,13 +31,14 @@
         :goods='recommend'
         ref="tuijian"
       ></goodslist>
+
     </scroll>
     <backtop
       v-show="isshowbacktop"
       class="backtops"
       @click.native="backclick"
     ></backtop>
-
+    <detailbottomnav class="bottomnav"></detailbottomnav>
   </div>
 </template>
 
@@ -48,6 +50,7 @@ import datailshopinfo from "./children/detailshopinfo";
 import detailinfo from "./children/detailinfo";
 import detailcanshu from "./children/detailcanshu";
 import detailpinglun from "./children/detailpinglun";
+import detailbottomnav from "./children/detailbottomnav";
 
 import scroll from "../../components/common/scroll";
 import backtop from "../../components/content/backtop";
@@ -73,6 +76,7 @@ export default {
     backtop,
     detailpinglun,
     goodslist,
+    detailbottomnav,
   },
   data() {
     return {
@@ -86,6 +90,7 @@ export default {
       pinglun: {},
       recommend: [],
       offtop: [],
+      currenindex: 0,
     };
   },
   created() {
@@ -115,10 +120,12 @@ export default {
     });
   },
   updated() {
+    this.offtop = [];
     this.offtop.push(0);
     this.offtop.push(this.$refs.canshu.$el.offsetTop);
     this.offtop.push(this.$refs.pinglun.$el.offsetTop);
     this.offtop.push(this.$refs.tuijian.$el.offsetTop);
+    this.offtop.push(Number.MAX_VALUE);
   },
   methods: {
     imageload() {
@@ -130,6 +137,29 @@ export default {
         this.isshowbacktop = true;
       } else {
         this.isshowbacktop = false;
+      }
+      // const gundong = -position.y;
+      // for (let i = 0; i < this.offtop.length; i++) {
+      //   if (
+      //     (i < this.offtop.length &&
+      //       gundong > this.offtop[i] &&
+      //       gundong < this.offtop[i + 1]) ||
+      //     (i === this.offtop.length - 1 && gundong > this.offtop[i])
+      //   ) {
+      //     console.log(i);
+      //   }
+      // }
+      const positionY = -position.y;
+      let _lenth = this.offtop.length;
+      for (let i = 0; i < _lenth - 1; i++) {
+        if (
+          this.currenindex !== i &&
+          positionY > this.offtop[i] &&
+          positionY < this.offtop[i + 1]
+        ) {
+          this.currenindex = i;
+          this.$refs.navde.currentindex = this.currenindex;
+        }
       }
     },
     backclick() {
@@ -155,5 +185,14 @@ export default {
 }
 .detailscroll {
   height: calc(100% - 44px);
+}
+.bottomnav {
+  position: absolute;
+  background-color: red;
+  height: 49px;
+  line-height: 49px;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 </style>
