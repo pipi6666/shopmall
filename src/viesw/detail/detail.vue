@@ -12,6 +12,12 @@
       :pullUpLoads='true'
       @scroll="scrollclick"
     >
+      <!-- <ul>
+        <li
+          v-for="(item,index) in $store.state.cartlist"
+          :key="index"
+        >{{item}}</li>
+      </ul> -->
       <detailswiper :topImages='topImages'></detailswiper>
       <detailbaseinfo :goods='goods'></detailbaseinfo>
       <datailshopinfo :shop='shop'></datailshopinfo>
@@ -38,7 +44,10 @@
       class="backtops"
       @click.native="backclick"
     ></backtop>
-    <detailbottomnav class="bottomnav"></detailbottomnav>
+    <detailbottomnav
+      class="bottomnav"
+      @addshopcat='addshopcat'
+    ></detailbottomnav>
   </div>
 </template>
 
@@ -167,6 +176,17 @@ export default {
     },
     titleitem(index) {
       this.$refs.scrollqq.scrollTo(0, -this.offtop[index]);
+    },
+    addshopcat() {
+      //获取购物车显示需要展示的数据
+      const produce = {};
+      produce.image = this.topImages[0];
+      produce.title = this.goods.title;
+      produce.price = this.goods.lowNowPrice;
+      produce.desc = this.goods.discountDesc;
+      produce.iid = this.iid;
+      //将商品添加到购物车里
+      this.$store.dispatch("addcart", produce);
     },
   },
 };
