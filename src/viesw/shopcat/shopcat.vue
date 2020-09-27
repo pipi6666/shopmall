@@ -2,8 +2,12 @@
 
   <div>
     <navbar class="daohang">
+      <!--导航  -->
       <div slot="center">购物车({{length}})</div>
     </navbar>
+    <!-- 商品列表 -->
+    <shoplist></shoplist>
+    <!-- 底部总计 -->
     <scroll class="content">
       <ul>
         <li>个人信息</li>
@@ -113,18 +117,21 @@
 <script>
 import scroll from "../../components/common/scroll";
 import navbar from "../../components/common/navbar";
-import {mapGetters} from 'vuex';
+
+import shoplist from "./children/shoplist";
+import { mapGetters } from "vuex";
 export default {
   name: "shopcat",
   components: {
     scroll,
     navbar,
+    shoplist,
   },
-  computed:{
+  computed: {
     ...mapGetters({
-      length:'cartlength'
-    })
-  }
+      length: "cartlength",
+    }),
+  },
   // updated() {
   //   console.log(this.$store.state.cartlist[0])
   // }
@@ -143,6 +150,5 @@ export default {
   text-align: center;
   font-size: 20px;
   color: fff;
-
 }
 </style>
