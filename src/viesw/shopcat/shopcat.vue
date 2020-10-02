@@ -5,130 +5,12 @@
       <div slot="center">购物车({{length}})</div>
     </navbar>
     <!-- 商品列表 -->
-    <shoplist></shoplist>
+    <shoplist ></shoplist>
     <!-- 底部总计 -->
-    <ul>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-      <li>个人信息</li>
-    </ul>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
   </div>
 </template>
 <script>
@@ -155,6 +37,12 @@ export default {
 <style scoped>
 .daohang {
   background-color: pink;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  height: 44px;
 }
 .daohang div {
   text-align: center;

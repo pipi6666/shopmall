@@ -1,6 +1,7 @@
 <template>
   <div>
     <scroll class="content">
+
       <li
         v-for="(item,index) in cartlist"
         :key="index"
@@ -19,6 +20,7 @@
           </div>
         </div>
       </li>
+
     </scroll>
   </div>
 </template>
@@ -49,7 +51,9 @@ li {
   list-style: none;
 }
 .content {
-height: calc(100%-44px);
+padding-top: 44px;
+  height: calc(100vh-44px);
+  overflow: hidden;
 }
 .image {
   width: 100%;
